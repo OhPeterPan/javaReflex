@@ -124,6 +124,17 @@
 
 		Class<?> getReturnType()  //获取普通返回值类型
     	Type getGenericReturnType() //获取泛型类型的返回值类型
+
+反射的几个获取Name方法的区别
+	getSimpleName  //获取的是不带包路径的类名
+	getName        //获取的是带包路径的类名
+	getCanonicalName //获取的也是带包名路径的类名
+	
+	一般情况下，普通类getName和getCanonicalName获取的一样，区别在于内部类和数组类型
+	比如：
+		比如byte[]类型,前者就是[B(getName),后者就是byte[](getCanonicalName)
+
+		比如byte[][]类型,前者就是[[B,后者就是byte[][]
 	 
 	
 	
